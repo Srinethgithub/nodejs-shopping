@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Tests not implemented yet\" && exit 0",
-    "debug": "nodemon --inspect app.js"
+    "debug": "nodemon --inspect app.js",
+    "build": "echo \"No frontend build required – this is a server-side rendered Express app\" && exit 0"
   },
   "repository": {
     "type": "git",
