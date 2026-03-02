@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'Srinethid7', url: 'https://github.com/Srinethgithub/nodejs-shopping.git']])
+                git branch: 'master',
+                url: 'https://github.com/Srinethgithub/nodejs-shopping.git'
             }
         }
         stage('installing') {
