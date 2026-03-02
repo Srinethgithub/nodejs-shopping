@@ -22,6 +22,17 @@ pipeline {
             steps {
                 sh 'npm run build'
             }
-        }    
+        } 
+        stage('docker build image') {
+            steps {
+                sh 'docker build -t nodejs-shopping-app .'
+            }
+        }
+
+        stage('run container') {
+            steps {
+                sh 'docker run -d -p 3000:3000 --name shopping-container nodejs-shopping-app'
+            }
+        }
     }
 }
